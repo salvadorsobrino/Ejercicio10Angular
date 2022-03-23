@@ -1,0 +1,22 @@
+<body>
+  <main>
+    <h1>Ejercicio Calculadora</h1>
+    <input id="numero1" type="text" placeholder="Operando1" [(ngModel)]="numero1">
+    <select id="select" name="select" [(ngModel)]="operador">
+      <option selected disabled hidden value=''></option>
+      <!-- 
+    "selected" hace que esta opción la plantilla predeterminada. 
+    "disabled" hace que esta opción sea inutilizable y no se pueda hacer clic.
+    "hidden" hace que esta opción no aparezca en la lista desplegable. -->
+
+      <option value="+">+</option>
+      <option value="-">-</option>
+      <option value="*">*</option>
+      <option value="/">/</option>
+    </select>
+    <input id="numero2" type="text" placeholder="Operando2" [(ngModel)]="numero2" >
+    =
+    <input id="solucion" type="text" placeholder="0" [(ngModel)]="resultado" readonly>
+    <button (click)="calcular()">Calcular</button>
+  </main>
+</body>
